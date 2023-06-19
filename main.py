@@ -1,6 +1,6 @@
 import set_operations_menu
 import quadratic_menu
-import exponencial_menu
+import exponential_menu
 import matrix_menu
 
 while True:
@@ -19,7 +19,7 @@ while True:
         case "2":
             quadratic_menu.quadratic_menu()
         case "3":
-            exponencial_menu.exponencial_menu()
+            exponential_menu.exponential_menu()
         case "4":
             matrix_menu.matrix_menu()
         case "5":

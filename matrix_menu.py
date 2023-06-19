@@ -4,10 +4,16 @@ def print_matrix(matrix):
 
 
 def get_matrix_input():
-    num_rows = int(input("Informe o número de linhas da matriz: "))
-    num_cols = int(input("Informe o número de colunas da matriz: "))
+    while True:
+        try:
+            num_rows = int(input("Informe o número de linhas da matriz: "))
+            num_cols = int(input("Informe o número de colunas da matriz: "))
+            break
+        except ValueError:
+            print("Entrada inválida. Certifique-se de inserir um número válido.\n")
 
     matrix = []
+
     for _ in range(num_rows):
         row = []
 
