@@ -5,12 +5,12 @@ def set_operations_menu():
         set_a_input = input("Conjunto A (separe os elementos por vírgula): ")
         set_b_input = input("Conjunto B (separe os elementos por vírgula): ")
 
-        if not set_a_input.isdigit() or not set_b_input.isdigit():
+        try:
+            set_a = set(map(float, set_a_input.split(",")))
+            set_b = set(map(float, set_b_input.split(",")))
+        except ValueError:
             print("\nErro de entrada. Certifique-se de digitar apenas números.")
             continue
-
-        set_a = set(map(int, set_a_input.split(",")))
-        set_b = set(map(int, set_b_input.split(",")))
         
         print("\n==========================\n")
         print("OPÇÕES PARA OPERAÇÕES COM CONJUNTOS:\n1: Verificar se A é subconjunto próprio de B\n2: Realizar operação de União\n3: Calcular interseção\n4: Calcular diferença\n5: Voltar")
